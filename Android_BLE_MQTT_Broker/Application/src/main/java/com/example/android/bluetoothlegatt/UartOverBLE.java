@@ -36,6 +36,10 @@ public class UartOverBLE {
 
     private List<RxListener> rxListeners;
 
+    private Object rxLock;
+    private boolean acquiredRx;
+    private byte[] rxData;
+
     // Code to manage Service lifecycle.
     private final ServiceConnection mServiceConnection = new ServiceConnection() {
 
@@ -79,6 +83,9 @@ public class UartOverBLE {
         receivedAckData = null;
 
         rxListeners = new ArrayList<>();
+        rxLock = new Object();
+        acquiredRx = false;
+        rxData = null;
     }
 
     public boolean ConnectToDevice(Context context, Intent service) {
@@ -132,8 +139,18 @@ public class UartOverBLE {
         txMetaCharacteristic.setValue(txMetaArr);
         mBluetoothLeService.writeCharacteristic(txMetaCharacteristic);
 
-        return false;
+        return true;
     }
+
+    public boolean TX_WriteBlocking(byte[] toWriteVal, int toWriteBytesLen, int timeout) throws InterruptedException {
+        boolean hasSent = Tx_WriteUnsafe(toWriteVal, toWriteBytesLen);
+        if (!hasSent) {
+            return false;
+        }
+
+        return TX_AckCheck(timeout);
+    }
+
 
     public boolean TX_AckCheck(int readWaitTimeout) throws InterruptedException {
         BluetoothGattCharacteristic txAckCharacteristic = mGattCharacteristics.get(TX_ACK_CHARACTERISTIC_INDEX);
@@ -151,13 +168,29 @@ public class UartOverBLE {
                 txAckCharacteristicValue = receivedAckData;
             }
         }
-        //If we
         byte txLastAckedPacket = (byte)((txAckCharacteristicValue[0] & 0x1F) >> 0x1F);
         return txPacketSerialnumber == txLastAckedPacket;
     }
 
     public void Rx_RegisterOnReceive(RxListener listener) {
         rxListeners.add(listener);
+    }
+
+    public byte[] Rx_receiveBlocking(int timeout) throws InterruptedException {
+        byte[] rxData = null;
+        synchronized (rxLock) {
+            if (!acquiredRx) {
+                rxLock.wait(timeout);
+            }
+
+            //If we didn't acquired the value after the timeout there is a problem with the connection
+            if (!acquiredRx) return null;
+            else {
+                acquiredRx = false; //Set false for the next try
+                rxData = rxData;
+            }
+        }
+        return rxData;
     }
 
     public void RX_ClearOnlisteners() {
@@ -189,6 +222,11 @@ public class UartOverBLE {
         else if (uuid.equals(SampleGattAttributes.RX_NOTIFICATION_CHARACTERISTIC)) {
             for (RxListener listener: rxListeners) {
                 listener.OnRxDataReceived(dataAsByteArr);
+            }
+            synchronized (rxLock) {
+                rxData = dataAsByteArr;
+                acquiredRx = true;
+                rxLock.notifyAll();
             }
         }
     }
