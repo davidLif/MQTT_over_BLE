@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\ce8cd4d8d746702cd960763c4929463b\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="18"
+        optimize="true"
+        revision="26.0.2"
+        sha1="f97cf85b0fe70d37a705111dafa6b1b418ea1650">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\transforms\preDex\release\5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.android\build-cache\44cd0355b184b9d336ec088165366c7426781706\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2442771a5590dd4eb4bce00c2e9dca9e22e4c963">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\pre-dexed\debug\classes_1bb351e693d2481d4ad9739f504dde26e7999914.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\0245900af0f1afcec27a2b09971da207\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="18"
+        optimize="true"
+        revision="26.0.2"
+        sha1="40392f30a601db5675cdf18192aab013d6fee6ec">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\transforms\preDex\release\8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.gradle\caches\modules-2\files-2.1\android.arch.lifecycle\common\1.0.0\e414a4cb28434e25c4f6aa71426eb20cf4874ae9\common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\pre-dexed\debug\common-1.0.0_e6fdd14ec3b67251b3630f4a84cae07d2f95f7d6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.android\build-cache\97d7b252d7aea29b9a3281cce84b6b4213c1884a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="40392f30a601db5675cdf18192aab013d6fee6ec">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\pre-dexed\debug\classes_17c7212f2cea5bebaec36c8fe880c7686784b38b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.android\build-cache\3c2ef1482f77cdd1a46487a0f723a8f778504a77\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\pre-dexed\debug\classes_b26c6c61cb8026f0a848f7587f4cfa8d45b72d75.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.android\build-cache\c25b1e6470835a1fc0c2ce591b775b0012e258c2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="80d9ff49e99ff481062ea190b43e8d6bdffd4ddc">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\pre-dexed\debug\classes_8c4ad5dac9734df9e679eea204c2ac5e26b2e853.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\26.1.0\814258103cf26a15fcc26ecce35f5b7d24b73f8\support-annotations-26.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="0814258103cf26a15fcc26ecce35f5b7d24b73f8">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\pre-dexed\debug\support-annotations-26.1.0_1da05cf2937066629812cc9f5b1dd1ecc77cc12b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.android\build-cache\784d6a14e265d6a4eef493cb4ab9945b6d3c13ef\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="508f50705b4fde51a16259f29c854201a3044516">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\pre-dexed\debug\classes_75e54cb263d98cb184bf957f1510f91d3b60b2ec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.android\build-cache\da2a97858631bc35ae7cc4209a5a87e3d1f865f3\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6f4138a4e065826cb044d49faea4cfd7191773d1">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\pre-dexed\debug\classes_6753330eff641298a654f145536776e82c43489f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\e755e47e414d01b6b0e000cbd531b9e3\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="18"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6f4138a4e065826cb044d49faea4cfd7191773d1">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\transforms\preDex\release\10.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.gradle\caches\modules-2\files-2.1\android.arch.lifecycle\common\1.0.0\e414a4cb28434e25c4f6aa71426eb20cf4874ae9\common-1.0.0.jar"
+        jumboMode="false"
+        min-sdk-version="18"
+        optimize="true"
+        revision="26.0.2"
+        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\transforms\preDex\release\14.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.android\build-cache\90645dda8a0a86cdf5d89072153250c5d2232d4d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b62fdc4cfef174c1e456014195c83fa7de7dc041">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\pre-dexed\debug\classes_5d5053447f3d8ad0b61c0c2c787e2d6e7fff0707.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.android\build-cache\8346086c269be4aff7c7fc2326a9f0e5fb143030\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f97cf85b0fe70d37a705111dafa6b1b418ea1650">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\pre-dexed\debug\classes_fe58b00df514e70a516554a3de55704aa6c21e87.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\2bc5f9c89039d3c339a1c74d62e436e2\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="18"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b62fdc4cfef174c1e456014195c83fa7de7dc041">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\transforms\preDex\release\13.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\65c95287ebe36de684e3a1ec8e2a1241\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="18"
+        optimize="true"
+        revision="26.0.2"
+        sha1="7efef32744ca4a436492d5cf28c08698cc2af256">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\transforms\preDex\release\6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\09dfc3d35116c6b1646d36172ed394ab\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="18"
+        optimize="true"
+        revision="26.0.2"
+        sha1="233f60a165ae622c8b36731502ebbda0f65e1930">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\transforms\preDex\release\7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\330c4e3b960b8c4d1b4478dfae9ce5c3\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="18"
+        optimize="true"
+        revision="26.0.2"
+        sha1="2442771a5590dd4eb4bce00c2e9dca9e22e4c963">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\transforms\preDex\release\11.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\26.1.0\814258103cf26a15fcc26ecce35f5b7d24b73f8\support-annotations-26.1.0.jar"
+        jumboMode="false"
+        min-sdk-version="18"
+        optimize="true"
+        revision="26.0.2"
+        sha1="0814258103cf26a15fcc26ecce35f5b7d24b73f8">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\transforms\preDex\release\12.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\2ca1f0013c964f4d872edeb7ceab0447\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="18"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b4d6fbbb48b42dd03fd9c5a09b3b7a53266df6ed">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\transforms\preDex\release\4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.android\build-cache\8f1ed664b84f65640e1d09aa0d179e8afeb4a411\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="233f60a165ae622c8b36731502ebbda0f65e1930">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\pre-dexed\debug\classes_03b7e596f2d68ad500556553edfe837761afaac0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.gradle\caches\modules-2\files-2.1\android.arch.core\common\1.0.0\a2d487452376193fc8c103dd2b9bd5f2b1b44563\common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\pre-dexed\debug\common-1.0.0_a77ed15da425456dd30037f725dec85c7eb6d52a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.gradle\caches\transforms-1\files-1.1\support-v13-26.1.0.aar\08c78966d1ff262d9f4fa21951ddc37d\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="18"
+        optimize="true"
+        revision="26.0.2"
+        sha1="80d9ff49e99ff481062ea190b43e8d6bdffd4ddc">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\transforms\preDex\release\1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.android\build-cache\4140c80188eea7267bdea69cc30f255ad8ab3a73\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b4d6fbbb48b42dd03fd9c5a09b3b7a53266df6ed">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\pre-dexed\debug\classes_ec87e4030f2adab736952fdacc6affe8015fff1a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\44374e3cea07e88e58838d9589f89c6d\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="18"
+        optimize="true"
+        revision="26.0.2"
+        sha1="f428e2fbc9ed0b297e3a3f420e51e6982f66822d">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\transforms\preDex\release\2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.android\build-cache\c2a0dfc4861bf8ed85aeabfc6bf001e5d8bc675a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="7efef32744ca4a436492d5cf28c08698cc2af256">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\pre-dexed\debug\classes_4cea8abf851f5ad83bdfc0b83b6d7ebee8d390ab.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\af98cab6ed4ca7a1d283197148076ba2\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="18"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\transforms\preDex\release\3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.gradle\caches\modules-2\files-2.1\android.arch.core\common\1.0.0\a2d487452376193fc8c103dd2b9bd5f2b1b44563\common-1.0.0.jar"
+        jumboMode="false"
+        min-sdk-version="18"
+        optimize="true"
+        revision="26.0.2"
+        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\transforms\preDex\release\15.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\3b924379d562a3a4dd22dfb56e00ccac\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="18"
+        optimize="true"
+        revision="26.0.2"
+        sha1="508f50705b4fde51a16259f29c854201a3044516">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\transforms\preDex\release\9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\david\.android\build-cache\20c407c6697bdf5c775f1ccdcbde9c3a41103a01\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f428e2fbc9ed0b297e3a3f420e51e6982f66822d">
+        <dex dex="C:\Users\david\Documents\corses matirial\Advanced Computer Systems\Project\Java_BLE_client\android-BluetoothLeGatt-master\Application\build\intermediates\pre-dexed\debug\classes_89688fe9ec63f9cb8562f0d5edb89d64d6f72e4a.jar" />
+    </item>
+
+</items>
