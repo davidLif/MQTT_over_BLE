@@ -175,6 +175,23 @@ Application/tx_rx_channel.obj: C:/Texas_industries/SimpleLink_cc13/simplelink_cc
 Application/tx_rx_channel.obj: C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/knl/Task.h
 Application/tx_rx_channel.obj: C:/Texas_industries/xdctools_3_50_04_43_core/packages/xdc/runtime/IModule.h
 Application/tx_rx_channel.obj: C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/knl/Event__epilogue.h
+Application/tx_rx_channel.obj: C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/BIOS.h
+Application/tx_rx_channel.obj: C:/Texas_industries/xdctools_3_50_04_43_core/packages/xdc/runtime/Types.h
+Application/tx_rx_channel.obj: C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/BIOS__prologue.h
+Application/tx_rx_channel.obj: C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/package/package.defs.h
+Application/tx_rx_channel.obj: C:/Texas_industries/xdctools_3_50_04_43_core/packages/xdc/runtime/Error.h
+Application/tx_rx_channel.obj: C:/Texas_industries/xdctools_3_50_04_43_core/packages/xdc/runtime/Types.h
+Application/tx_rx_channel.obj: C:/Texas_industries/xdctools_3_50_04_43_core/packages/xdc/runtime/IModule.h
+Application/tx_rx_channel.obj: C:/Texas_industries/xdctools_3_50_04_43_core/packages/xdc/runtime/IGateProvider.h
+Application/tx_rx_channel.obj: C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/package/BIOS_RtsGateProxy.h
+Application/tx_rx_channel.obj: C:/Texas_industries/xdctools_3_50_04_43_core/packages/xdc/runtime/Types.h
+Application/tx_rx_channel.obj: C:/Texas_industries/xdctools_3_50_04_43_core/packages/xdc/runtime/IInstance.h
+Application/tx_rx_channel.obj: C:/Texas_industries/xdctools_3_50_04_43_core/packages/xdc/runtime/IGateProvider.h
+Application/tx_rx_channel.obj: C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/BIOS__epilogue.h
+Application/tx_rx_channel.obj: C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/package/BIOS_RtsGateProxy.h
+Application/tx_rx_channel.obj: C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/knl/Task.h
+Application/tx_rx_channel.obj: C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/knl/package/Task_SupportProxy.h
+Application/tx_rx_channel.obj: C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/knl/Semaphore.h
 Application/tx_rx_channel.obj: ../Application/tx_rx_channel.h
 
 ../Application/tx_rx_channel.c: 
@@ -352,4 +369,21 @@ C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirt
 C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/knl/Task.h: 
 C:/Texas_industries/xdctools_3_50_04_43_core/packages/xdc/runtime/IModule.h: 
 C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/knl/Event__epilogue.h: 
+C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/BIOS.h: 
+C:/Texas_industries/xdctools_3_50_04_43_core/packages/xdc/runtime/Types.h: 
+C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/BIOS__prologue.h: 
+C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/package/package.defs.h: 
+C:/Texas_industries/xdctools_3_50_04_43_core/packages/xdc/runtime/Error.h: 
+C:/Texas_industries/xdctools_3_50_04_43_core/packages/xdc/runtime/Types.h: 
+C:/Texas_industries/xdctools_3_50_04_43_core/packages/xdc/runtime/IModule.h: 
+C:/Texas_industries/xdctools_3_50_04_43_core/packages/xdc/runtime/IGateProvider.h: 
+C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/package/BIOS_RtsGateProxy.h: 
+C:/Texas_industries/xdctools_3_50_04_43_core/packages/xdc/runtime/Types.h: 
+C:/Texas_industries/xdctools_3_50_04_43_core/packages/xdc/runtime/IInstance.h: 
+C:/Texas_industries/xdctools_3_50_04_43_core/packages/xdc/runtime/IGateProvider.h: 
+C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/BIOS__epilogue.h: 
+C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/package/BIOS_RtsGateProxy.h: 
+C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/knl/Task.h: 
+C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/knl/package/Task_SupportProxy.h: 
+C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/knl/Semaphore.h: 
 ../Application/tx_rx_channel.h: 

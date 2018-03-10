@@ -197,7 +197,7 @@ PIN_State ledPinState; */
 #define DEFAULT_CONN_PAUSE_PERIPHERAL         6
 
 // How often to perform periodic event (in msec)
-#define SBP_PERIODIC_EVT_PERIOD               1000//5000
+#define SBP_PERIODIC_EVT_PERIOD               5000//1000
 
 // Type of Display to open
 #if !defined(Display_DISABLE_ALL)
