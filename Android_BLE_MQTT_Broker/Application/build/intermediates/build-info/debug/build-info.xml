@@ -5,44 +5,39 @@
     build-mode="COLD"
     density="420dpi"
     format="10"
-    ir-eligibility="METHOD_ADDED"
+    ir-eligibility="COMPATIBLE"
     plugin-version="3.0.1"
-    timestamp="1520705807522"
+    timestamp="1521309373674"
     token="-9125871820807100469"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1505" />
+        duration="2492" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="139" />
+        duration="31" />
     <task
         name="verifier"
-        duration="46" />
+        duration="17" />
 
     <artifact
         location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\intermediates\split-apk\debug\slices\slice_9.apk"
         type="SPLIT" />
+    <artifact
+        location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\outputs\apk\debug\Application-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1520703589077"
-        verifier="FULL_BUILD_REQUESTED" >
+        ir-eligibility="METHOD_ADDED"
+        timestamp="1521309066012"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
             location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\intermediates\split-apk\debug\slices\slice_0.apk"
@@ -51,7 +46,10 @@
             location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
             location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\intermediates\split-apk\debug\slices\slice_4.apk"
@@ -60,10 +58,16 @@
             location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
             location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
             location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\outputs\apk\debug\Application-debug.apk"
@@ -71,12 +75,24 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="METHOD_ADDED"
-        timestamp="1520705807522"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1521309246530"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1521309373674"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
+        <artifact
+            location="C:\CompilationTest\Android_BLE_MQTT_Broker\Application\build\outputs\apk\debug\Application-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>

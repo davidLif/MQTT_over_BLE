@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="gwId">24</integer>
+    <integer name="advPeriod">1200</integer>
+    <integer name="keepAlivePeriod">10</integer>
+    <integer name="maxRetries">3</integer>
+    <integer name="waitingTime">10</integer>
+    <integer name="handlerTimeout">864000</integer>
+    <integer name="forwarderTimeout">300</integer>
+    <integer name="checkingPeriod">864000</integer>
+    <integer name="udpPort">20000</integer>
+    <string name="brokerURL">iot.eclipse.org</string>
+    <integer name="brokerTcpPort">1883</integer>
+    <string name="serialPortURL">serial@COM1:57600</string>
+    //Can be com.example.android.mqttsn.gateway.client.udp.UDPClientInterface OR com.example.android.mqttsn.gateway.client.serial.SerialPortClientInterface
+    <string name="clientInterfaces">com.example.android.mqttsn.gateway.client.udp.UDPClientInterface</string>
+    <string name="protocolName">MQIsdp</string>
+    <integer name="protocolVersion">3</integer>
+    <bool name="retain">false</bool>
+    <integer name="willQoS">0</integer>
+    <bool name="willFlag">true</bool>
+    <bool name="cleanSession">true</bool>
+    <string name="willTopic">Test</string>
+    <string name="willMessage">bye</string>
+    <integer name="predfTopicIdSize">30</integer>
+    <integer name="maxMqttsLength">60</integer>
+    <integer name="minMqttsLength">2</integer>
+    <string name="logLevel">WARN</string>
+    <integer-array name="predefinedTopicsKeys">1,2</integer-array>
+    <string-array name="predefinedTopicsValues">"predefName1","predefName2"</string-array>
+</resources>
