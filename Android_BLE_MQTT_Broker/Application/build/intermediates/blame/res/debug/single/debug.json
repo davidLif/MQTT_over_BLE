@@ -120,6 +120,10 @@
         "source": "C:\\Users\\david\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\330c4e3b960b8c4d1b4478dfae9ce5c3\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
+        "merged": "C:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\res\\merged\\debug\\layout_single_message_log_layout.xml.flat",
+        "source": "C:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\src\\main\\res\\layout\\single_message_log_layout.xml"
+    },
+    {
         "merged": "C:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\res\\merged\\debug\\layout_abc_dialog_title_material.xml.flat",
         "source": "C:\\Users\\david\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\44374e3cea07e88e58838d9589f89c6d\\res\\layout\\abc_dialog_title_material.xml"
     },
@@ -876,6 +880,10 @@
         "source": "C:\\Users\\david\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\44374e3cea07e88e58838d9589f89c6d\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
+        "merged": "C:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\res\\merged\\debug\\layout_activity_connect_screen.xml.flat",
+        "source": "C:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\src\\main\\res\\layout\\activity_connect_screen.xml"
+    },
+    {
         "merged": "C:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
         "source": "C:\\Users\\david\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\44374e3cea07e88e58838d9589f89c6d\\res\\drawable-xxhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
     },
@@ -1152,6 +1160,10 @@
         "source": "C:\\Users\\david\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\44374e3cea07e88e58838d9589f89c6d\\res\\anim\\abc_slide_out_top.xml"
     },
     {
+        "merged": "C:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\res\\merged\\debug\\layout_activity_messages_log_screen.xml.flat",
+        "source": "C:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\src\\main\\res\\layout\\activity_messages_log_screen.xml"
+    },
+    {
         "merged": "C:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_cancel_action.xml.flat",
         "source": "C:\\Users\\david\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\ce8cd4d8d746702cd960763c4929463b\\res\\layout\\notification_media_cancel_action.xml"
     },
@@ -1376,16 +1388,16 @@
         "source": "C:\\Users\\david\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\44374e3cea07e88e58838d9589f89c6d\\res\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "C:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\david\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\44374e3cea07e88e58838d9589f89c6d\\res\\drawable-hdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
+        "merged": "C:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "C:\\Users\\david\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\330c4e3b960b8c4d1b4478dfae9ce5c3\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "C:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\res\\merged\\debug\\drawable_abc_seekbar_track_material.xml.flat",
         "source": "C:\\Users\\david\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\44374e3cea07e88e58838d9589f89c6d\\res\\drawable\\abc_seekbar_track_material.xml"
     },
     {
-        "merged": "C:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "C:\\Users\\david\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\330c4e3b960b8c4d1b4478dfae9ce5c3\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
+        "merged": "C:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\david\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\44374e3cea07e88e58838d9589f89c6d\\res\\drawable-hdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
         "merged": "C:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_mode_close_item_material.xml.flat",

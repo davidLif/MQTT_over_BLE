@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Tue Mar 20 23:06:07 IST 2018
+0.baseType=DIRECTORY
+0.base=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dex\\release\\0
+0.path=classes.dex
+0.set=DEX
+count=1

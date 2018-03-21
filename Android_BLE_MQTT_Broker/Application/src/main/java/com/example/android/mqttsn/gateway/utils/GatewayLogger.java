@@ -23,7 +23,7 @@ import com.example.android.bluetoothlegatt.DeviceControlActivity;
 
 public class GatewayLogger {
 
-	public final static String TAG = DeviceControlActivity.class.getSimpleName();
+	public static final String TAG = "MQTT_over_BLE";
 	
 	public final static int INFO  = 1;
 	public final static int WARN  = 2;

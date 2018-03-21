@@ -8,11 +8,10 @@
     <integer name="handlerTimeout">864000</integer>
     <integer name="forwarderTimeout">300</integer>
     <integer name="checkingPeriod">864000</integer>
-    <integer name="udpPort">20000</integer>
     <string name="brokerURL">iot.eclipse.org</string>
     <integer name="brokerTcpPort">1883</integer>
     <string name="serialPortURL">serial@COM1:57600</string>
-    //Can be com.example.android.mqttsn.gateway.client.udp.UDPClientInterface OR com.example.android.mqttsn.gateway.client.serial.SerialPortClientInterface
+    <!--Can be com.example.android.mqttsn.gateway.client.udp.UDPClientInterface OR com.example.android.mqttsn.gateway.client.serial.SerialPortClientInterface-->
     <string name="clientInterfaces">com.example.android.mqttsn.gateway.client.udp.UDPClientInterface</string>
     <string name="protocolName">MQIsdp</string>
     <integer name="protocolVersion">3</integer>
@@ -28,4 +27,8 @@
     <string name="logLevel">WARN</string>
     <integer-array name="predefinedTopicsKeys">1,2</integer-array>
     <string-array name="predefinedTopicsValues">"predefName1","predefName2"</string-array>
+
+    <!--We listen and send the udp packets insdie the device, so always localhost-->
+    <integer name="udpPort">20000</integer>
+    <integer name="udpPortReceive">30000</integer>
 </resources>
