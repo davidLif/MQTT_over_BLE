@@ -174,7 +174,7 @@ all: $(OBJS) $(GEN_CMDS)
 	@$(MAKE) --no-print-directory -Onone "simple_peripheral_cc1350lp_app_FlashROM.out"
 
 dependents:
-	-cd C:/Users/david/workspace_v7/simple_peripheral_cc1350lp_stack_FlashROM/Debug && $(MAKE) clean all
+	-cd C:/Users/david/workspace_v7/simple_peripheral_cc1350lp_stack_FlashROM/Debug && $(MAKE) all
 
 # Tool invocations
 simple_peripheral_cc1350lp_app_FlashROM.out: $(OBJS) $(GEN_CMDS) C:/Users/david/workspace_v7/simple_peripheral_cc1350lp_stack_FlashROM/Debug/simple_peripheral_cc1350lp_stack_FlashROM.out

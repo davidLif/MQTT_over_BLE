@@ -19,8 +19,6 @@ package com.example.android.mqttsn.gateway.utils;
 
 import android.util.Log;
 
-import com.example.android.bluetoothlegatt.DeviceControlActivity;
-
 public class GatewayLogger {
 
 	public static final String TAG = "MQTT_over_BLE";

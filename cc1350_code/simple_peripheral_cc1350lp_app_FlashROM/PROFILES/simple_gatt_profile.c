@@ -458,14 +458,17 @@ bStatus_t SimpleProfile_SetParameter( uint8 param, uint8 len, void *value )
       break;
 
     case SIMPLEPROFILE_CHAR4:
-      if ( len <= TX_VALUE_LEN )
+      if ( len <= TX_VALUE_LEN - 1 )
       {
         //simpleProfileChar4 = *((uint8*)value);
         memcpy( simpleProfileChar4, value, len );
 
-        for (int i = len ; i < TX_VALUE_LEN; i++ ) {
+        for (int i = len ; i < TX_VALUE_LEN - 1; i++ ) {
             simpleProfileChar4[i] = 0;
         }
+
+        //Set the length of the data at the last byte
+        simpleProfileChar4[TX_VALUE_LEN - 1] = len;
 
         // See if Notification has been enabled
         GATTServApp_ProcessCharCfg( simpleProfileChar4Config, simpleProfileChar4, FALSE,

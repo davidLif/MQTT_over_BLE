@@ -105,11 +105,11 @@ uint8 Rx_tryReceive(void *pValue) {
     uint8 receivedDataLen = 0;
     uint8_t sentSerial;
 
-    if (SimpleProfile_GetParameter(SIMPLEPROFILE_CHAR2, &sentSerial) == SUCCESS) { //Read the serial number of the last sent packet
+    if (SimpleProfile_GetParameter(SIMPLEPROFILE_CHAR1, pValue) == SUCCESS) { //Try read the rx characteristic
 
+        sentSerial = ((uint8 *)pValue)[RX_VALUE_LEN - 1];
         if ((sentSerial & SENT_PACKET_SERIAL_NUM_MASK) != prevPacketSerialNum) { //If the serial number is different from the last receive, then a packet has been sent
 
-            SimpleProfile_GetParameter(SIMPLEPROFILE_CHAR1, pValue); //get the sent value
             SimpleProfile_SetParameter(SIMPLEPROFILE_CHAR3, sizeof(uint8_t), &sentSerial); //Send ack
             receivedDataLen = sentSerial & SENT_PACKET_LEN_MASK; //Calc received data length
             prevPacketSerialNum = sentSerial & SENT_PACKET_SERIAL_NUM_MASK;

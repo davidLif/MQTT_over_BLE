@@ -1,17 +1,17 @@
 #Internal package file, do not edit.
-#Wed Mar 21 18:44:04 IST 2018
-2.base=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\241
+#Wed Mar 21 21:38:25 IST 2018
+2.base=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\261
 5.set=DEX
 0.path=classes.dex
 2.baseType=DIRECTORY
-3.base=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\244
+3.base=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\264
 2.set=DEX
 1.path=classes.dex
-4.base=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\243
+4.base=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\263
 count=6
 5.baseType=DIRECTORY
 2.path=classes.dex
-5.base=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\245
+5.base=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\259
 4.set=DEX
 3.path=classes.dex
 3.baseType=DIRECTORY
@@ -19,9 +19,9 @@ count=6
 4.path=classes.dex
 1.baseType=DIRECTORY
 5.path=classes.dex
-0.base=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\240
+0.base=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\260
 0.baseType=DIRECTORY
 3.set=DEX
-1.base=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\242
+1.base=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\262
 4.baseType=DIRECTORY
 0.set=DEX

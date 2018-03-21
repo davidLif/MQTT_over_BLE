@@ -33,6 +33,7 @@ public class UartOverBLE {
     private final static int TX_VALUE_CHARACTERISTIC_INDEX = 0;
     private final static int TX_PACKAGE_SERIAL_NUM_AND_LEN_CHARACTERISTIC_INDEX = 1;
     private final static int TX_ACK_CHARACTERISTIC_INDEX = 2;
+    private final static int RX_NOTIFICATION_CHARACTERISTIC_INDEX = 3;
 
     private BluetoothLeService mBluetoothLeService;
     private String mDeviceAddress;
@@ -85,6 +86,13 @@ public class UartOverBLE {
                 try {
                     List<BluetoothGattService> supportedServices =  mBluetoothLeService.getSupportedGattServices();
                     mGattCharacteristics = supportedServices.get(TX_RX_GATT_SERVICE_INDEX).getCharacteristics();
+
+                    //Enable notifications so we will be able to receive from Rx
+                    final BluetoothGattCharacteristic rxCharacter = mGattCharacteristics.get(RX_NOTIFICATION_CHARACTERISTIC_INDEX);
+                    if ((rxCharacter.getProperties() & BluetoothGattCharacteristic.PROPERTY_NOTIFY) > 0) {
+                        mBluetoothLeService.setCharacteristicNotification(rxCharacter, true);
+                    }
+
                     if (mDataLogger != null) mDataLogger.HandleUartOverBLEReady();
                 }
                 catch (Exception exp) {
@@ -180,28 +188,34 @@ public class UartOverBLE {
 
     public boolean Tx_WriteUnsafe(byte[] toWriteVal, int toWriteBytesLen){
 
-        if (toWriteVal.length < toWriteBytesLen || toWriteVal == null || toWriteBytesLen > 20) {
+        if (toWriteVal.length < toWriteBytesLen || toWriteVal == null || toWriteBytesLen > 19) {
             return false;
         }
 
         Log.i(TAG, "Tx writing has been called. Len: " + String.valueOf(toWriteBytesLen));
 
         //Write the value
-        BluetoothGattCharacteristic txValCharacteristic = mGattCharacteristics.get(TX_VALUE_CHARACTERISTIC_INDEX);
-        txValCharacteristic.setValue(toWriteVal);
-        mBluetoothLeService.writeCharacteristic(txValCharacteristic);
-
+        byte[] buff = new byte[20];
+        for (int i = 0; i < toWriteBytesLen; i++) {
+            buff[i] = toWriteVal[i];
+        }
         //Calc packet serial number
         txPacketSerialnumber++;
         if (txPacketSerialnumber > 0xE0) txPacketSerialnumber = 0;//circulate serial number
         //Calc packet meta
-        byte txMeta = (byte)(toWriteBytesLen | (byte)((int)txPacketSerialnumber << 0x1F));
-        byte[] txMetaArr = new byte[1];
-        txMetaArr[0] = txMeta;
+        byte txMeta = (byte)(toWriteBytesLen | (byte)((int)txPacketSerialnumber << 0x5));
+        buff[19] = txMeta;
+        BluetoothGattCharacteristic txValCharacteristic = mGattCharacteristics.get(TX_VALUE_CHARACTERISTIC_INDEX);
+        txValCharacteristic.setValue(buff);
+        mBluetoothLeService.writeCharacteristic(txValCharacteristic);
+
+
+        //byte[] txMetaArr = new byte[1];
+        //txMetaArr[0] = txMeta;
         //Write transfer metadata
-        BluetoothGattCharacteristic txMetaCharacteristic = mGattCharacteristics.get(TX_PACKAGE_SERIAL_NUM_AND_LEN_CHARACTERISTIC_INDEX);
-        txMetaCharacteristic.setValue(txMetaArr);
-        mBluetoothLeService.writeCharacteristic(txMetaCharacteristic);
+        //BluetoothGattCharacteristic txMetaCharacteristic = mGattCharacteristics.get(TX_PACKAGE_SERIAL_NUM_AND_LEN_CHARACTERISTIC_INDEX);
+        //txMetaCharacteristic.setValue(txMetaArr);
+        //mBluetoothLeService.writeCharacteristic(txMetaCharacteristic);
 
         return true;
     }
@@ -277,9 +291,11 @@ public class UartOverBLE {
             }
         }
         else if (uuid.equals(SampleGattAttributes.RX_NOTIFICATION_CHARACTERISTIC)) {
-            Log.i(TAG, "RX notification received.");
+            int dataLen = dataAsByteArr[19];
+
+            Log.i(TAG, "RX notification received. Msg " + new String(dataAsByteArr, 0, dataLen));
             for (RxListener listener: rxListeners) {
-                listener.OnRxDataReceived(dataAsByteArr);
+                listener.OnRxDataReceived(dataAsByteArr, dataLen);
             }
             synchronized (rxLock) {
                 rxData = dataAsByteArr;

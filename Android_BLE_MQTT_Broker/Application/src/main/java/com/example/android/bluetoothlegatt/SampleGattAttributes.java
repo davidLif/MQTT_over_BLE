@@ -40,7 +40,7 @@ class SampleGattAttributes {
     public static final String TX_ACK_CHARACTERISTIC =  "0000fff3-0000-1000-8000-00805f9b34fb";
     public static final String RX_NOTIFICATION_CHARACTERISTIC =  "0000fff4-0000-1000-8000-00805f9b34fb";
 
-    private final static String TAG = DeviceControlActivity.class.getSimpleName();
+    private final static String TAG = "MQTT_over_BLE";
 
     static {
         // Sample Services

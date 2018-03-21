@@ -5,5 +5,5 @@ package com.example.android.bluetoothlegatt;
  */
 
 public interface RxListener {
-    void OnRxDataReceived(byte[] rxData);
+    void OnRxDataReceived(byte[] rxData, int len);
 }
