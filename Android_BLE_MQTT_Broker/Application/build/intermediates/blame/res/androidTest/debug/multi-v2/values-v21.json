@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v21\\values-v21.xml",
+            "outputFile": "C:\\MQTT_over_BLE\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
                     "source": "C:\\Users\\david\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\330c4e3b960b8c4d1b4478dfae9ce5c3\\res\\values-v21\\values-v21.xml",

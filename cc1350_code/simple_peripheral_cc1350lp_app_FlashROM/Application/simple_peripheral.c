@@ -270,6 +270,10 @@ static ICall_EntityID selfEntity;
 // Semaphore globally used to post events to the application thread
 static ICall_Semaphore sem;
 
+Semaphore_Handle bleInitFinishedSemaphore;
+Semaphore_Params semParams;
+Semaphore_Struct structSem; /* Memory allocated at build time */
+
 // Clock instances for internal periodic events.
 static Clock_Struct periodicClock;
 
@@ -289,6 +293,8 @@ static uint16_t events;
 // Task configuration
 Task_Struct sbpTask;
 Char sbpTaskStack[SBP_TASK_STACK_SIZE];
+Task_Struct sbpTask2;
+Char sbpTaskStack2[1024];
 
 // Profile state and parameters
 //static gaprole_States_t gapProfileState = GAPROLE_INIT;
@@ -374,6 +380,7 @@ static uint8_t rspTxRetry = 0;
  */
 
 static void SimpleBLEPeripheral_init( void );
+static void SimpleBLEPeripheral_extraTask(UArg a0, UArg a1);
 static void SimpleBLEPeripheral_taskFxn(UArg a0, UArg a1);
 
 static uint8_t SimpleBLEPeripheral_processStackMsg(ICall_Hdr *pMsg);
@@ -455,7 +462,22 @@ void SimpleBLEPeripheral_createTask(void)
   taskParams.priority = SBP_TASK_PRIORITY;
 
   Task_construct(&sbpTask, SimpleBLEPeripheral_taskFxn, &taskParams, NULL);
+
+  Semaphore_Params_init(&semParams);
+  Semaphore_construct(&structSem, 0, &semParams);
+
+  /* It's optional to store the handle */
+  bleInitFinishedSemaphore = Semaphore_handle(&structSem);
+
+  // Configure second task
+  Task_Params_init(&taskParams);
+  taskParams.stack = sbpTaskStack2;
+  taskParams.stackSize = 1024;
+  taskParams.priority = SBP_TASK_PRIORITY + 3;
+  Task_construct(&sbpTask2, SimpleBLEPeripheral_extraTask, &taskParams, NULL);
 }
+
+
 
 /*********************************************************************
  * @fn      SimpleBLEPeripheral_init
@@ -602,7 +624,7 @@ static void SimpleBLEPeripheral_init(void)
 #ifndef FEATURE_OAD_ONCHIP
   // Setup the SimpleProfile Characteristic Values
   {
-    uint8_t charValue1[RX_VALUE_LEN] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+    uint8_t charValue1[RX_VALUE_LEN] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 0,0 , 0, 0, 0, 0, 0, 0, 0 };
     uint8_t charValue3 = 0;
 
     SimpleProfile_SetParameter(SIMPLEPROFILE_CHAR1, RX_VALUE_LEN,
@@ -643,6 +665,20 @@ static void SimpleBLEPeripheral_init(void)
   Display_print0(dispHandle, 0, 0, "BLE Peripheral");
 #endif // FEATURE_OAD
 }
+
+static uint8 receivedLen = 0;
+
+static void SimpleBLEPeripheral_extraTask(UArg a0, UArg a1) {
+    //bool isSuccessful;
+    //uint32_t timeout = 1000 * (1000/Clock_tickPeriod);
+    Semaphore_pend(bleInitFinishedSemaphore, BIOS_WAIT_FOREVER);
+
+    receivedLen = Rx_receiveBlocking((void *)receiveBuffer, 0); // 0 == wait forever
+
+
+}
+
+
 
 /*********************************************************************
  * @fn      SimpleBLEPeripheral_taskFxn
@@ -1222,11 +1258,17 @@ static void SimpleBLEPeripheral_processCharValueChangeEvt(uint8_t paramID)
 static void SimpleBLEPeripheral_performPeriodicTask(void)
 {
 #ifndef FEATURE_OAD_ONCHIP
-  uint8 receivedLen = Rx_tryReceive((void *)receiveBuffer);
-  //uint8_t arr[7] = {'G', 'o', 't', ' ', 'm', 'e'};
-  //Tx_BleUnsafeSend(7, arr);
+
+  Semaphore_post(bleInitFinishedSemaphore);
+  //if (counter > 2) {
+    //  Tx_BleUnsafeSend(6, arr);
+  //}
+  //uint8 receivedLen = Rx_tryReceive((void *)receiveBuffer);
+  //uint8_t arr[6] = {'G', 'o', 't', ' ', 'm', 'e'};
+  //Tx_BleUnsafeSend(6, arr);
 
   if (receivedLen != 0) {
+      //((uint8 *)receiveBuffer)[0] = seeIfExecuted;
       //uint32_t currVal =  PIN_getOutputValue(Board_PIN_LED1);
       //PIN_setOutputValue(ledPinHandle, Board_PIN_LED1, !currVal);
       Tx_BleUnsafeSend(receivedLen, receiveBuffer);

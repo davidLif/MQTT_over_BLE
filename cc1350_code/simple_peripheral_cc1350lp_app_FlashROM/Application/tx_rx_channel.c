@@ -26,6 +26,8 @@
 
 #include "tx_rx_channel.h"
 
+extern void WaitOnRxReceive(uint32_t timeoutInClicks);
+
 
 /* DONE */
 /*********************************************************************
@@ -49,11 +51,9 @@
 
  static uint8 prevPacketSerialNum = 0;
 
- // Semaphore globally used to post events to the application thread
- static Semaphore_Handle rxSem;
-
- // Clock instances for internal periodic events.
- static Clock_Struct rxBlockingPeriodicClock;
+ //static Semaphore_Handle receiveSemaphore;
+ //Semaphore_Params semParams1;
+ //Semaphore_Struct structSem1; /* Memory allocated at build time */
 
 /*********************************************************************
  * LOCAL VARIABLES
@@ -63,35 +63,15 @@
  * LOCAL FUNCTIONS
  */
 
- void ExTimeUpdate_clockHandler(UArg arg);
-
- void ExTimeUpdate_clockHandler(UArg arg)
- {
-   // Wake up waiting rx
-   Semaphore_post((Semaphore_Object *)rxSem);
- }
-
 /*********************************************************************
  * PUBLIC FUNCTIONS
  */
 
-uint8 BlockingFunctionDataInit() {
-    //RX constructs
-    Util_constructClock(&rxBlockingPeriodicClock, ExTimeUpdate_clockHandler,
-                        RETRY_RECEIVE_PERIODIC_EVENT, 0, false, NULL);
-    rxSem = Semaphore_create(0, NULL, NULL);
-    if (rxSem == NULL) {
-        return 0;
-    }
-
-    return 1;
-}
-
 uint8 Tx_BleUnsafeSend(uint8 len, void *value) {
     if (len > TX_VALUE_LEN) {
-        return;
+        return 0;
     }
-    else if (len <= TX_VALUE_LEN) {
+    else if (len <= TX_VALUE_LEN && len > 0) {
         if (SimpleProfile_SetParameter(TX_CHARACTERISTIC, len, value) == SUCCESS) {
             return 1;
         }
@@ -99,20 +79,26 @@ uint8 Tx_BleUnsafeSend(uint8 len, void *value) {
             return 0;
         }
     }
+    else {
+        return 0;
+    }
 }
 
 uint8 Rx_tryReceive(void *pValue) {
     uint8 receivedDataLen = 0;
     uint8_t sentSerial;
+    uint8 prevPacketSerialNum_local = prevPacketSerialNum;
 
     if (SimpleProfile_GetParameter(SIMPLEPROFILE_CHAR1, pValue) == SUCCESS) { //Try read the rx characteristic
 
+
         sentSerial = ((uint8 *)pValue)[RX_VALUE_LEN - 1];
-        if ((sentSerial & SENT_PACKET_SERIAL_NUM_MASK) != prevPacketSerialNum) { //If the serial number is different from the last receive, then a packet has been sent
+        if (sentSerial != prevPacketSerialNum_local) { //If the serial number is different from the last receive, then a packet has been sent
 
             SimpleProfile_SetParameter(SIMPLEPROFILE_CHAR3, sizeof(uint8_t), &sentSerial); //Send ack
             receivedDataLen = sentSerial & SENT_PACKET_LEN_MASK; //Calc received data length
-            prevPacketSerialNum = sentSerial & SENT_PACKET_SERIAL_NUM_MASK;
+            prevPacketSerialNum_local = sentSerial;
+            prevPacketSerialNum = prevPacketSerialNum_local;
         }
     }
 
@@ -120,25 +106,17 @@ uint8 Rx_tryReceive(void *pValue) {
 }
 
 uint8 Rx_receiveBlocking(void *pValue, int timeout) {
-    uint8 receivedDataLen = Rx_tryReceive(pValue);
-    uint8 accamulatedTime = 0;
 
-    if (receivedDataLen == 0) {
-        Util_startClock(&rxBlockingPeriodicClock);
-
-        while (receivedDataLen == 0) {
-            Semaphore_pend(rxSem, 0);
-
-            uint8 receivedDataLen = Rx_tryReceive(pValue);
-
-            accamulatedTime += RETRY_RECEIVE_PERIODIC_EVENT;
-            if (accamulatedTime > timeout) {
-                break;
-            }
-        }
-
-        Util_stopClock(&rxBlockingPeriodicClock);
+    uint32_t timeoutInClicks;
+    if (timeout == 0) {
+        timeoutInClicks = BIOS_WAIT_FOREVER;
     }
+    else {
+        timeoutInClicks = timeout * (timeout/Clock_tickPeriod);
+    }
+
+    WaitOnRxReceive(timeoutInClicks);
+    uint8 receivedDataLen = Rx_tryReceive(pValue);
 
     return receivedDataLen;
 }

@@ -134,7 +134,7 @@ public class MessagesLogScreen extends Activity implements IDataupdate, UartOver
                     for (int i = 0; i < len; i++) {
                         msg[i] = rxData[i];
                     }
-                    mUdpClient.SendMessage(rxData);
+                    mUdpClient.SendMessage(msg);
                     Log.i(TAG, "Received msg from the device. Msg: " + new String(rxData, 0, len));
                     onLogUpdate(new String(rxData, 0, len));
                 }

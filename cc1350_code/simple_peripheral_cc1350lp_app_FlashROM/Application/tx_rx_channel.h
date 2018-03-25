@@ -33,8 +33,6 @@ extern "C"
  * FUNCTIONS
  */
 
-extern uint8 BlockingFunctionDataInit();
-
 /*
  * Send data by notification
  */
@@ -51,6 +49,10 @@ extern uint8 Tx_BleUnsafeSend(uint8 len, void *value);
 extern uint8 Rx_tryReceive(void *pValue);
 
 extern uint8 Rx_receiveBlocking(void *pValue, int timeout);
+
+
+//Private
+//extern void WaitOnRxReceive(uint32_t timeoutInClicks);
 
 
 /*********************************************************************

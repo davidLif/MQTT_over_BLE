@@ -20,8 +20,8 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="26"
-        android:targetSdkVersion="26" />
+        android:minSdkVersion="23"
+        android:targetSdkVersion="23" />
 
     <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
 
@@ -47,7 +47,6 @@
         android:debuggable="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:testOnly="true"
         android:theme="@android:style/Theme.Holo.Light" >
         <service
             android:name="com.example.android.bluetoothlegatt.BluetoothLeService"

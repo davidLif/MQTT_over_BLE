@@ -129,7 +129,8 @@ typedef struct
  * API FUNCTIONS 
  */
 
-
+//extern void WaitOnRxReceive(uint32_t timeoutInClicks);
+void WaitOnRxReceive(uint32_t timeoutInClicks);
 /*
  * SimpleProfile_AddService- Initializes the Simple GATT Profile service by registering
  *          GATT attributes with the GATT server.
@@ -170,6 +171,9 @@ extern bStatus_t SimpleProfile_SetParameter( uint8 param, uint8 len, void *value
  *          uint16 pointer).
  */
 extern bStatus_t SimpleProfile_GetParameter( uint8 param, void *value );
+
+
+
 
 
 /*********************************************************************

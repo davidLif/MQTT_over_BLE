@@ -49,6 +49,9 @@
  * INCLUDES
  */
 #include <string.h>
+#include <ti/sysbios/BIOS.h>
+#include <ti/sysbios/knl/Task.h>
+#include <ti/sysbios/knl/Semaphore.h>
 
 #include "bcomdef.h"
 #include "osal.h"
@@ -60,6 +63,7 @@
 #include "gapbondmgr.h"
 
 #include "simple_gatt_profile.h"
+
 
 /*********************************************************************
  * MACROS
@@ -333,6 +337,10 @@ CONST gattServiceCBs_t simpleProfileCBs =
 };
 
 
+static Semaphore_Handle receiveSemaphore;
+Semaphore_Params semParams1;
+Semaphore_Struct structSem1; /* Memory allocated at build time */
+
 
 /*********************************************************************
  * PUBLIC FUNCTIONS
@@ -392,6 +400,12 @@ bStatus_t SimpleProfile_AddService( uint32 services )
  */
 bStatus_t SimpleProfile_RegisterAppCBs( simpleProfileCBs_t *appCallbacks )
 {
+    Semaphore_Params_init(&semParams1);
+        Semaphore_construct(&structSem1, 0, &semParams1);
+
+          /* It's optional to store the handle */
+        receiveSemaphore = Semaphore_handle(&structSem1);
+
   if ( appCallbacks )
   {
 
@@ -687,6 +701,7 @@ static bStatus_t simpleProfile_WriteAttrCB(uint16_t connHandle,
               simpleProfileChar1[i] = 0;
           }
           notifyApp = SIMPLEPROFILE_CHAR1;
+          Semaphore_post(receiveSemaphore);
           break;
 
 
@@ -715,6 +730,10 @@ static bStatus_t simpleProfile_WriteAttrCB(uint16_t connHandle,
 
 
   return ( status );
+}
+
+void WaitOnRxReceive(uint32_t timeoutInClicks) {
+    Semaphore_pend(receiveSemaphore, timeoutInClicks);
 }
 
 /*********************************************************************
