@@ -108,11 +108,6 @@
 			<locationURI>TI_BLE_SDK_BASE/source/ti/blestack/icall/src/icall_cc2650.c</locationURI>
 		</link>
 		<link>
-			<name>ICall/icall_platform.h</name>
-			<type>1</type>
-			<locationURI>TI_BLE_SDK_BASE/source/ti/blestack/icall/src/icall_platform.h</locationURI>
-		</link>
-		<link>
 			<name>ICallBLE/ble_user_config.c</name>
 			<type>1</type>
 			<locationURI>TI_BLE_SDK_BASE/source/ti/blestack/icall/app/ble_user_config.c</locationURI>

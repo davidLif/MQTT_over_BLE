@@ -4,7 +4,7 @@ package/configPkg.sch
 package/.vers_g200
 package/.vers_r200
 package/.vers_b200
-package/.xdc-D21
+package/.xdc-D20
 package/configPkg.java
 package/configPkg.class
 package/package_configPkg.c

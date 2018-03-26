@@ -9,10 +9,10 @@
  */
 
 
--l"C:\Users\david\workspace_v7\simple_peripheral_cc1350lp_app_FlashROM\Debug\configPkg\package\cfg\app_ble_pem3.oem3"
--l"C:\Texas_industries\SimpleLink_cc13\simplelink_cc13x0_sdk_1_60_00_21\examples\rtos\CC1350_LAUNCHXL\blestack\simple_peripheral\tirtos\ccs\config\src\sysbios\rom_sysbios.aem3"
--l"C:\Texas_industries\SimpleLink_cc13\simplelink_cc13x0_sdk_1_60_00_21\kernel\tirtos\packages\ti\targets\arm\rtsarm\lib\boot.aem3"
--l"C:\Texas_industries\SimpleLink_cc13\simplelink_cc13x0_sdk_1_60_00_21\kernel\tirtos\packages\ti\targets\arm\rtsarm\lib\auto_init.aem3"
+-l"C:\Users\shlomi\workspace_v7\simple_peripheral_cc1350lp_app_FlashROM\Debug\configPkg\package\cfg\app_ble_pem3.oem3"
+-l"C:\ti\simplelink_cc13x0_sdk_1_50_00_08\examples\rtos\CC1350_LAUNCHXL\blestack\simple_peripheral\tirtos\ccs\config\src\sysbios\rom_sysbios.aem3"
+-l"C:\ti\simplelink_cc13x0_sdk_1_50_00_08\kernel\tirtos\packages\ti\targets\arm\rtsarm\lib\boot.aem3"
+-l"C:\ti\simplelink_cc13x0_sdk_1_50_00_08\kernel\tirtos\packages\ti\targets\arm\rtsarm\lib\auto_init.aem3"
 
 --retain="*(xdc.meta)"
 
@@ -108,7 +108,7 @@ ti_sysbios_family_arm_m3_Hwi_nvic = 0xe000e000;
 
 /* Content from ti.sysbios.heaps (null): */
 
-/* Content from ti.sysbios.rom.cortexm.cc13xx (C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/kernel/tirtos/packages/ti/sysbios/rom/cortexm/cc13xx/golden/CC13xx/CC13xx_link_ti.xdt): */
+/* Content from ti.sysbios.rom.cortexm.cc13xx (C:/ti/simplelink_cc13x0_sdk_1_50_00_08/kernel/tirtos/packages/ti/sysbios/rom/cortexm/cc13xx/golden/CC13xx/CC13xx_link_ti.xdt): */
 
 -u xdc_runtime_Error_policy__C
 -u xdc_runtime_IModule_Interface__BASE__C

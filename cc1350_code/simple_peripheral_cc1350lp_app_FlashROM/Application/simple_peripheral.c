@@ -63,6 +63,8 @@
 #include "devinfoservice.h"
 #include "simple_gatt_profile.h"
 
+#include "main_tirtos.h"
+
 #if defined(FEATURE_OAD) || defined(IMAGE_INVALIDATE)
 #include "oad_target.h"
 #include "oad.h"
@@ -262,7 +264,7 @@ Display_Handle dispHandle = NULL;
  * LOCAL VARIABLES
  */
 
-static uint8 receiveBuffer[RX_VALUE_LEN];
+static uint8 receiveBuffer[20/*RX_VALUE_LEN*/];
 static void * sendBuffer = NULL;
 static uint8 sendLen = 0;
 static uint8 setsendBuffer = 0;
@@ -389,7 +391,7 @@ static uint8_t rspTxRetry = 0;
 static void SimpleBLEPeripheral_init( void );
 static void SimpleBLEPeripheral_extraTask(UArg a0, UArg a1);
 static void SimpleBLEPeripheral_taskFxn(UArg a0, UArg a1);
-static uint8 SendOnOtherTask(uint8 len, void *value, uint32_t timeout);
+uint8 SendOnOtherTask(uint8 len, void *value, uint32_t timeout);
 
 static uint8_t SimpleBLEPeripheral_processStackMsg(ICall_Hdr *pMsg);
 static uint8_t SimpleBLEPeripheral_processGATTMsg(gattMsgEvent_t *pMsg);
@@ -634,16 +636,16 @@ static void SimpleBLEPeripheral_init(void)
 #ifndef FEATURE_OAD_ONCHIP
   // Setup the SimpleProfile Characteristic Values
   {
-    uint8_t charValue1[RX_VALUE_LEN] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 0,0 , 0, 0, 0, 0, 0, 0, 0 };
+    uint8_t charValue1[20/*RX_VALUE_LEN*/] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 0,0 , 0, 0, 0, 0, 0, 0, 0 };
     uint8_t charValue3 = 0;
 
-    SimpleProfile_SetParameter(SIMPLEPROFILE_CHAR1, RX_VALUE_LEN,
+    SimpleProfile_SetParameter(SIMPLEPROFILE_CHAR1, 20/*RX_VALUE_LEN*/,
                                charValue1);
     SimpleProfile_SetParameter(SIMPLEPROFILE_CHAR2, sizeof(uint8_t),
                                &charValue3);
     SimpleProfile_SetParameter(SIMPLEPROFILE_CHAR3, sizeof(uint8_t),
                                &charValue3);
-    SimpleProfile_SetParameter(SIMPLEPROFILE_CHAR4, TX_VALUE_LEN,
+    SimpleProfile_SetParameter(SIMPLEPROFILE_CHAR4, 20/*TX_VALUE_LEN*/,
                                charValue1);
   }
 
@@ -678,6 +680,7 @@ static void SimpleBLEPeripheral_init(void)
 
 static uint8 receivedLen = 0;
 
+extern void mqttsn_call_entry_thread(void);
 static void SimpleBLEPeripheral_extraTask(UArg a0, UArg a1) {
     //bool isSuccessful;
     //uint32_t timeout = 1000 * (1000/Clock_tickPeriod);
@@ -685,9 +688,12 @@ static void SimpleBLEPeripheral_extraTask(UArg a0, UArg a1) {
 
     receivedLen = Rx_receiveBlocking((void *)receiveBuffer, 0); // 0 == wait forever
     SendOnOtherTask(receivedLen, (void *)receiveBuffer, 0);
+
+    mqttsn_call_entry_thread();
+    //mqttsn_task_create();
 }
 
-static uint8 SendOnOtherTask(uint8 len, void *value, uint32_t timeout) {
+uint8 SendOnOtherTask(uint8 len, void *value, uint32_t timeout) {
 
     uint32_t timeoutInClicks;
         if (timeout == 0) {

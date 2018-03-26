@@ -6,7 +6,7 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CFG_SRCS += \
-C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/examples/rtos/CC1350_LAUNCHXL/blestack/simple_peripheral/tirtos/ccs/config/app_ble.cfg 
+C:/ti/simplelink_cc13x0_sdk_1_50_00_08/examples/rtos/CC1350_LAUNCHXL/blestack/simple_peripheral/tirtos/ccs/config/app_ble.cfg 
 
 GEN_CMDS += \
 ./configPkg/linker.cmd 

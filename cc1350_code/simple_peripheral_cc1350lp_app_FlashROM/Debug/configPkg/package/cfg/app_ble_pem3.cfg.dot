@@ -5,7 +5,7 @@ digraph configuration {
     concentrate=true;
     compound=true;
     label="\nConfiguration for configPkg/app_ble.xem3"
-  node [font=Helvetica, fontsize=14, fontcolor=black];  subgraph cluster0 {label=""; __cfg [label="C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/examples/rtos/CC1350_LAUNCHXL/blestack/simple_peripheral/tirtos/ccs/config/app_ble.cfg", color=white, fontcolor=blue];
+  node [font=Helvetica, fontsize=14, fontcolor=black];  subgraph cluster0 {label=""; __cfg [label="C:/ti/simplelink_cc13x0_sdk_1_50_00_08/examples/rtos/CC1350_LAUNCHXL/blestack/simple_peripheral/tirtos/ccs/config/app_ble.cfg", color=white, fontcolor=blue];
     node [font=Helvetica, fontsize=10];    subgraph cluster1 {
         label="";
         xdc_services_global__top [shape=box,label="xdc.services.global\n1,0,0,0", color=white];
@@ -25,47 +25,47 @@ digraph configuration {
     }
     subgraph cluster4 {
         label="";
-        xdc_shelf__top [shape=box,label="xdc.shelf\n1,0,0,1510103405982", color=white];
+        xdc_shelf__top [shape=box,label="xdc.shelf\n1,0,0,1502152168844", color=white];
     }
     subgraph cluster5 {
         label="";
-        xdc_services_spec__top [shape=box,label="xdc.services.spec\n1,0,0,1510103405982", color=white];
+        xdc_services_spec__top [shape=box,label="xdc.services.spec\n1,0,0,1502152168844", color=white];
     }
     subgraph cluster6 {
         label="";
-        xdc_services_intern_xsr__top [shape=box,label="xdc.services.intern.xsr\n1,0,0,1510103405982", color=white];
+        xdc_services_intern_xsr__top [shape=box,label="xdc.services.intern.xsr\n1,0,0,1502152168844", color=white];
     }
     subgraph cluster7 {
         label="";
-        xdc_services_intern_gen__top [shape=box,label="xdc.services.intern.gen\n1,0,0,1510103405982", color=white];
+        xdc_services_intern_gen__top [shape=box,label="xdc.services.intern.gen\n1,0,0,1502152168844", color=white];
     }
     subgraph cluster8 {
         label="";
-        xdc_services_intern_cmd__top [shape=box,label="xdc.services.intern.cmd\n1,0,0,1510103405982", color=white];
+        xdc_services_intern_cmd__top [shape=box,label="xdc.services.intern.cmd\n1,0,0,1502152168844", color=white];
     }
     subgraph cluster9 {
         label="";
-        xdc_bld__top [shape=box,label="xdc.bld\n1,0,2,1510103405982", color=white];
+        xdc_bld__top [shape=box,label="xdc.bld\n1,0,2,1502152168844", color=white];
         xdc_bld__bot [shape=point,label="", style=invis];
     }
     subgraph cluster10 {
         label="";
-        ti_targets__top [shape=box,label="ti.targets\n1,0,3,1510103405982", color=white];
+        ti_targets__top [shape=box,label="ti.targets\n1,0,3,1502152168844", color=white];
         ti_targets__bot [shape=point,label="", style=invis];
     }
     subgraph cluster11 {
         label="";
-        ti_targets_arm_elf__top [shape=box,label="ti.targets.arm.elf\n1,0,0,1510103405982", color=white];
+        ti_targets_arm_elf__top [shape=box,label="ti.targets.arm.elf\n1,0,0,1502152168844", color=white];
         ti_targets_arm_elf__bot [shape=point,label="", style=invis];
     }
     subgraph cluster12 {
         label="";
-        xdc_rov__top [shape=box,label="xdc.rov\n1,0,1,1510103405982", color=white];
+        xdc_rov__top [shape=box,label="xdc.rov\n1,0,1,1502152168844", color=white];
         xdc_rov__bot [shape=point,label="", style=invis];
     }
     subgraph cluster13 {
         label="";
-        xdc_runtime__top [shape=box,label="xdc.runtime\n2,1,0,1510103405982", color=white];
+        xdc_runtime__top [shape=box,label="xdc.runtime\n2,1,0,1502152168844", color=white];
         xdc_runtime__bot [shape=point,label="", style=invis];
         xdc_runtime_Assert [style=filled,fillcolor=lightgray, label="Assert"];
         xdc_runtime__top -> xdc_runtime_Assert[style=invis];
@@ -136,7 +136,7 @@ digraph configuration {
     }
     subgraph cluster14 {
         label="";
-        ti_targets_arm_rtsarm__top [shape=box,label="ti.targets.arm.rtsarm\n1,0,0,1510103405982", color=white];
+        ti_targets_arm_rtsarm__top [shape=box,label="ti.targets.arm.rtsarm\n1,0,0,1502152168844", color=white];
         ti_targets_arm_rtsarm__bot [shape=point,label="", style=invis];
     }
     subgraph cluster15 {
@@ -171,7 +171,7 @@ digraph configuration {
     }
     subgraph cluster20 {
         label="";
-        ti_sysbios_rts__top [shape=box,label="ti.sysbios.rts\n2,0,0,0,1510103405982", color=white];
+        ti_sysbios_rts__top [shape=box,label="ti.sysbios.rts\n2,0,0,0,1502152168844", color=white];
         ti_sysbios_rts__bot [shape=point,label="", style=invis];
         ti_sysbios_rts_MemAlloc [style=filled,fillcolor=lightgray, label="MemAlloc"];
         ti_sysbios_rts__top -> ti_sysbios_rts_MemAlloc[style=invis];
@@ -179,12 +179,12 @@ digraph configuration {
     }
     subgraph cluster21 {
         label="";
-        xdc_runtime_knl__top [shape=box,label="xdc.runtime.knl\n1,0,0,1510103405982", color=white];
+        xdc_runtime_knl__top [shape=box,label="xdc.runtime.knl\n1,0,0,1502152168844", color=white];
         xdc_runtime_knl__bot [shape=point,label="", style=invis];
     }
     subgraph cluster22 {
         label="";
-        ti_catalog_arm_cortexm3__top [shape=box,label="ti.catalog.arm.cortexm3\n1,0,0,1510103405982", color=white];
+        ti_catalog_arm_cortexm3__top [shape=box,label="ti.catalog.arm.cortexm3\n1,0,0,1502152168844", color=white];
         ti_catalog_arm_cortexm3__bot [shape=point,label="", style=invis];
         ti_catalog_arm_cortexm3_CC13xx [style=filled,fillcolor=lightgray, label="CC13xx"];
         ti_catalog_arm_cortexm3__top -> ti_catalog_arm_cortexm3_CC13xx[style=invis];
@@ -197,7 +197,7 @@ digraph configuration {
     }
     subgraph cluster24 {
         label="";
-        ti_catalog__top [shape=box,label="ti.catalog\n1,0,0,1510103405982", color=white];
+        ti_catalog__top [shape=box,label="ti.catalog\n1,0,0,1502152168844", color=white];
     }
     subgraph cluster25 {
         label="";
@@ -234,12 +234,12 @@ digraph configuration {
     }
     subgraph cluster28 {
         label="";
-        ti_catalog_arm_cortexm4__top [shape=box,label="ti.catalog.arm.cortexm4\n1,0,0,1510103405982", color=white];
+        ti_catalog_arm_cortexm4__top [shape=box,label="ti.catalog.arm.cortexm4\n1,0,0,1502152168844", color=white];
         ti_catalog_arm_cortexm4__bot [shape=point,label="", style=invis];
     }
     subgraph cluster29 {
         label="";
-        ti_platforms_simplelink__top [shape=box,label="ti.platforms.simplelink\n1,0,0,1510103405982", color=white];
+        ti_platforms_simplelink__top [shape=box,label="ti.platforms.simplelink\n1,0,0,1502152168844", color=white];
         ti_platforms_simplelink__bot [shape=point,label="", style=invis];
         ti_platforms_simplelink_Platform [style=filled,fillcolor=lightgray, label="Platform"];
         ti_platforms_simplelink__top -> ti_platforms_simplelink_Platform[style=invis];
@@ -341,7 +341,7 @@ digraph configuration {
     }
     subgraph cluster35 {
         label="";
-        ti_sysbios_gates__top [shape=box,label="ti.sysbios.gates\n2,0,0,0,1510103405982", color=white];
+        ti_sysbios_gates__top [shape=box,label="ti.sysbios.gates\n2,0,0,0,1502152168844", color=white];
         ti_sysbios_gates__bot [shape=point,label="", style=invis];
         ti_sysbios_gates_GateHwi [style=filled,fillcolor=lightgray, label="GateHwi"];
         ti_sysbios_gates__top -> ti_sysbios_gates_GateHwi[style=invis];
@@ -352,7 +352,7 @@ digraph configuration {
     }
     subgraph cluster36 {
         label="";
-        ti_sysbios_xdcruntime__top [shape=box,label="ti.sysbios.xdcruntime\n1,0,0,1510103405982", color=white];
+        ti_sysbios_xdcruntime__top [shape=box,label="ti.sysbios.xdcruntime\n1,0,0,1502152168844", color=white];
         ti_sysbios_xdcruntime__bot [shape=point,label="", style=invis];
         ti_sysbios_xdcruntime_Settings [style=filled,fillcolor=lightgray, label="Settings"];
         ti_sysbios_xdcruntime__top -> ti_sysbios_xdcruntime_Settings[style=invis];
@@ -360,7 +360,7 @@ digraph configuration {
     }
     subgraph cluster37 {
         label="";
-        ti_sysbios_heaps__top [shape=box,label="ti.sysbios.heaps\n2,0,0,0,1510103405982", color=white];
+        ti_sysbios_heaps__top [shape=box,label="ti.sysbios.heaps\n2,0,0,0,1502152168844", color=white];
         ti_sysbios_heaps__bot [shape=point,label="", style=invis];
         ti_sysbios_heaps_HeapMem [style=filled,fillcolor=lightgray, label="HeapMem"];
         ti_sysbios_heaps__top -> ti_sysbios_heaps_HeapMem[style=invis];
@@ -379,7 +379,7 @@ digraph configuration {
     }
     subgraph cluster39 {
         label="";
-        ti_sysbios_utils__top [shape=box,label="ti.sysbios.utils\n2,0,0,0,1510103405982", color=white];
+        ti_sysbios_utils__top [shape=box,label="ti.sysbios.utils\n2,0,0,0,1502152168844", color=white];
         ti_sysbios_utils__bot [shape=point,label="", style=invis];
     }
     subgraph cluster40 {
@@ -393,28 +393,28 @@ digraph configuration {
     }
   }
   node [font=Helvetica, fontsize=10];
-    ti_targets_arm_elf_M3__1_0_16__9_6 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,6",style=filled, fillcolor=lightgrey];
-    ti_targets_arm_rtsarm__bot -> ti_targets_arm_elf_M3__1_0_16__9_6 [ltail=cluster14];
-    ti_targets_arm_elf_M3__1_0_16__9_6 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,6",style=filled, fillcolor=lightgrey];
-    ti_sysbios_hal__bot -> ti_targets_arm_elf_M3__1_0_16__9_6 [ltail=cluster30];
-    ti_targets_arm_elf_M3__1_0_16__9_6 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,6",style=filled, fillcolor=lightgrey];
-    ti_sysbios_family_arm_cc26xx__bot -> ti_targets_arm_elf_M3__1_0_16__9_6 [ltail=cluster31];
-    ti_targets_arm_elf_M3__1_0_16__9_6 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,6",style=filled, fillcolor=lightgrey];
-    ti_sysbios_family_arm_m3__bot -> ti_targets_arm_elf_M3__1_0_16__9_6 [ltail=cluster32];
-    ti_targets_arm_elf_M3__1_0_16__9_6 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,6",style=filled, fillcolor=lightgrey];
-    ti_sysbios_knl__bot -> ti_targets_arm_elf_M3__1_0_16__9_6 [ltail=cluster33];
-    ti_targets_arm_elf_M3__1_0_16__9_6 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,6",style=filled, fillcolor=lightgrey];
-    ti_sysbios__bot -> ti_targets_arm_elf_M3__1_0_16__9_6 [ltail=cluster34];
-    ti_targets_arm_elf_M3__1_0_16__9_6 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,6",style=filled, fillcolor=lightgrey];
-    ti_sysbios_gates__bot -> ti_targets_arm_elf_M3__1_0_16__9_6 [ltail=cluster35];
-    ti_targets_arm_elf_M3__1_0_16__9_6 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,6",style=filled, fillcolor=lightgrey];
-    ti_sysbios_xdcruntime__bot -> ti_targets_arm_elf_M3__1_0_16__9_6 [ltail=cluster36];
-    ti_targets_arm_elf_M3__1_0_16__9_6 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,6",style=filled, fillcolor=lightgrey];
-    ti_sysbios_heaps__bot -> ti_targets_arm_elf_M3__1_0_16__9_6 [ltail=cluster37];
+    ti_targets_arm_elf_M3__1_0_16__9_4 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,4",style=filled, fillcolor=lightgrey];
+    ti_targets_arm_rtsarm__bot -> ti_targets_arm_elf_M3__1_0_16__9_4 [ltail=cluster14];
+    ti_targets_arm_elf_M3__1_0_16__9_4 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,4",style=filled, fillcolor=lightgrey];
+    ti_sysbios_hal__bot -> ti_targets_arm_elf_M3__1_0_16__9_4 [ltail=cluster30];
+    ti_targets_arm_elf_M3__1_0_16__9_4 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,4",style=filled, fillcolor=lightgrey];
+    ti_sysbios_family_arm_cc26xx__bot -> ti_targets_arm_elf_M3__1_0_16__9_4 [ltail=cluster31];
+    ti_targets_arm_elf_M3__1_0_16__9_4 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,4",style=filled, fillcolor=lightgrey];
+    ti_sysbios_family_arm_m3__bot -> ti_targets_arm_elf_M3__1_0_16__9_4 [ltail=cluster32];
+    ti_targets_arm_elf_M3__1_0_16__9_4 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,4",style=filled, fillcolor=lightgrey];
+    ti_sysbios_knl__bot -> ti_targets_arm_elf_M3__1_0_16__9_4 [ltail=cluster33];
+    ti_targets_arm_elf_M3__1_0_16__9_4 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,4",style=filled, fillcolor=lightgrey];
+    ti_sysbios__bot -> ti_targets_arm_elf_M3__1_0_16__9_4 [ltail=cluster34];
+    ti_targets_arm_elf_M3__1_0_16__9_4 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,4",style=filled, fillcolor=lightgrey];
+    ti_sysbios_gates__bot -> ti_targets_arm_elf_M3__1_0_16__9_4 [ltail=cluster35];
+    ti_targets_arm_elf_M3__1_0_16__9_4 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,4",style=filled, fillcolor=lightgrey];
+    ti_sysbios_xdcruntime__bot -> ti_targets_arm_elf_M3__1_0_16__9_4 [ltail=cluster36];
+    ti_targets_arm_elf_M3__1_0_16__9_4 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,4",style=filled, fillcolor=lightgrey];
+    ti_sysbios_heaps__bot -> ti_targets_arm_elf_M3__1_0_16__9_4 [ltail=cluster37];
     ti_targets_arm_elf_M3__1_0_16__9_0 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,0",style=filled, fillcolor=lightgrey];
     ti_sysbios_rom_cortexm_cc13xx__bot -> ti_targets_arm_elf_M3__1_0_16__9_0 [ltail=cluster38];
-    ti_targets_arm_elf_M3__1_0_16__9_6 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,6",style=filled, fillcolor=lightgrey];
-    ti_sysbios_utils__bot -> ti_targets_arm_elf_M3__1_0_16__9_6 [ltail=cluster39];
-    ti_targets_arm_elf_M3__1_0_16__9_6 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,6",style=filled, fillcolor=lightgrey];
-    configPkg__top -> ti_targets_arm_elf_M3__1_0_16__9_6 [ltail=cluster40];
+    ti_targets_arm_elf_M3__1_0_16__9_4 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,4",style=filled, fillcolor=lightgrey];
+    ti_sysbios_utils__bot -> ti_targets_arm_elf_M3__1_0_16__9_4 [ltail=cluster39];
+    ti_targets_arm_elf_M3__1_0_16__9_4 [shape=record,label="ti.targets.arm.elf.M3|1,0,16.9,4",style=filled, fillcolor=lightgrey];
+    configPkg__top -> ti_targets_arm_elf_M3__1_0_16__9_4 [ltail=cluster40];
 }

@@ -6,7 +6,7 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/source/ti/blestack/common/cc26xx/ecc/ECCROMCC26XX.c 
+C:/ti/simplelink_cc13x0_sdk_1_50_00_08/source/ti/blestack/common/cc26xx/ecc/ECCROMCC26XX.c 
 
 C_DEPS += \
 ./Drivers/ECC/ECCROMCC26XX.d 
@@ -21,6 +21,6 @@ C_DEPS__QUOTED += \
 "Drivers\ECC\ECCROMCC26XX.d" 
 
 C_SRCS__QUOTED += \
-"C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/source/ti/blestack/common/cc26xx/ecc/ECCROMCC26XX.c" 
+"C:/ti/simplelink_cc13x0_sdk_1_50_00_08/source/ti/blestack/common/cc26xx/ecc/ECCROMCC26XX.c" 
 
 

@@ -8,7 +8,7 @@ SHELL = cmd.exe
 C_SRCS += \
 ../Application/simple_peripheral.c \
 ../Application/tx_rx_channel.c \
-C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/source/ti/blestack/common/cc26xx/util.c 
+C:/ti/simplelink_cc13x0_sdk_1_50_00_08/source/ti/blestack/common/cc26xx/util.c 
 
 C_DEPS += \
 ./Application/simple_peripheral.d \
@@ -33,6 +33,6 @@ C_DEPS__QUOTED += \
 C_SRCS__QUOTED += \
 "../Application/simple_peripheral.c" \
 "../Application/tx_rx_channel.c" \
-"C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/source/ti/blestack/common/cc26xx/util.c" 
+"C:/ti/simplelink_cc13x0_sdk_1_50_00_08/source/ti/blestack/common/cc26xx/util.c" 
 
 

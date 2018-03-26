@@ -7,8 +7,8 @@ SHELL = cmd.exe
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../PROFILES/devinfoservice.c \
-C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/source/ti/blestack/host/gatt_uuid.c \
-C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/source/ti/blestack/host/gattservapp_util.c \
+C:/ti/simplelink_cc13x0_sdk_1_50_00_08/source/ti/blestack/host/gatt_uuid.c \
+C:/ti/simplelink_cc13x0_sdk_1_50_00_08/source/ti/blestack/host/gattservapp_util.c \
 ../PROFILES/peripheral.c \
 ../PROFILES/simple_gatt_profile.c 
 
@@ -42,8 +42,8 @@ C_DEPS__QUOTED += \
 
 C_SRCS__QUOTED += \
 "../PROFILES/devinfoservice.c" \
-"C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/source/ti/blestack/host/gatt_uuid.c" \
-"C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/source/ti/blestack/host/gattservapp_util.c" \
+"C:/ti/simplelink_cc13x0_sdk_1_50_00_08/source/ti/blestack/host/gatt_uuid.c" \
+"C:/ti/simplelink_cc13x0_sdk_1_50_00_08/source/ti/blestack/host/gattservapp_util.c" \
 "../PROFILES/peripheral.c" \
 "../PROFILES/simple_gatt_profile.c" 
 

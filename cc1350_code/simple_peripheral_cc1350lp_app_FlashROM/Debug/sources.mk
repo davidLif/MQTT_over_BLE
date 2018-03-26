@@ -123,6 +123,7 @@ GEN_OPTS__QUOTED :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+. \
 Application \
 Drivers/ECC \
 Drivers/TRNG \
@@ -131,4 +132,6 @@ ICallBLE \
 PROFILES \
 Startup \
 TOOLS \
+mqttsn-lib \
+mqttsn-transport \
 

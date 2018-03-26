@@ -10,6 +10,6 @@
 	<rts value="libc.a"/>
 	<createSlaveProjects value=""/>
 	<templateProperties value="id=simple_peripheral_cc1350lp_app_FlashROM.projectspec.simple_peripheral_cc1350lp_app_FlashROM,type=rtsc,products=com.ti.SIMPLELINK_CC13X0_SDK,xdcToolsVersion=3.50.03.33,target=ti.targets.arm.elf.M3,platform=ti.platforms.simplelink:CC1350F128,buildProfile=release,isHybrid=true,configuroOptions=--compileOptions &quot;${COMPILER_FLAGS} &quot; ,"/>
-	<origin value="C:\Texsas_Instruments\simplelink_cc13x0_sdk_1_50_00_08\examples\rtos\CC1350_LAUNCHXL\blestack\simple_peripheral\tirtos\ccs\simple_peripheral_cc1350lp_app_FlashROM.projectspec"/>
+	<origin value="C:/Users/shlomi/Downloads/MQTT_over_BLE-master (1)/MQTT_over_BLE-master/cc1350_code/simple_peripheral_cc1350lp_app_FlashROM"/>
 	<filesToOpen value=""/>
 </projectOptions>

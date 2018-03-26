@@ -68,10 +68,10 @@ extern void WaitOnRxReceive(uint32_t timeoutInClicks);
  */
 
 uint8 Tx_BleUnsafeSend(uint8 len, void *value) {
-    if (len > TX_VALUE_LEN) {
+    if (len > 20/*TX_VALUE_LEN*/) {
         return 0;
     }
-    else if (len <= TX_VALUE_LEN && len > 0) {
+    else if (len <= 20/*TX_VALUE_LEN*/ && len > 0) {
         if (SimpleProfile_SetParameter(TX_CHARACTERISTIC, len, value) == SUCCESS) {
             return 1;
         }
@@ -92,7 +92,7 @@ uint8 Rx_tryReceive(void *pValue) {
     if (SimpleProfile_GetParameter(SIMPLEPROFILE_CHAR1, pValue) == SUCCESS) { //Try read the rx characteristic
 
 
-        sentSerial = ((uint8 *)pValue)[RX_VALUE_LEN - 1];
+        sentSerial = ((uint8 *)pValue)[20/*RX_VALUE_LEN*/ - 1];
         if (sentSerial != prevPacketSerialNum_local) { //If the serial number is different from the last receive, then a packet has been sent
 
             SimpleProfile_SetParameter(SIMPLEPROFILE_CHAR3, sizeof(uint8_t), &sentSerial); //Send ack

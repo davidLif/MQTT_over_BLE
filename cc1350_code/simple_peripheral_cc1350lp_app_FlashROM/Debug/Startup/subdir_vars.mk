@@ -6,8 +6,8 @@ SHELL = cmd.exe
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/source/ti/blestack/target/board.c \
-C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/examples/rtos/CC1350_LAUNCHXL/blestack/simple_peripheral/tirtos/iar/config/ccfg_app_ble.c \
+C:/ti/simplelink_cc13x0_sdk_1_50_00_08/source/ti/blestack/target/board.c \
+C:/ti/simplelink_cc13x0_sdk_1_50_00_08/examples/rtos/CC1350_LAUNCHXL/blestack/simple_peripheral/tirtos/iar/config/ccfg_app_ble.c \
 ../Startup/main.c 
 
 C_DEPS += \
@@ -31,8 +31,8 @@ C_DEPS__QUOTED += \
 "Startup\main.d" 
 
 C_SRCS__QUOTED += \
-"C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/source/ti/blestack/target/board.c" \
-"C:/Texas_industries/SimpleLink_cc13/simplelink_cc13x0_sdk_1_60_00_21/examples/rtos/CC1350_LAUNCHXL/blestack/simple_peripheral/tirtos/iar/config/ccfg_app_ble.c" \
+"C:/ti/simplelink_cc13x0_sdk_1_50_00_08/source/ti/blestack/target/board.c" \
+"C:/ti/simplelink_cc13x0_sdk_1_50_00_08/examples/rtos/CC1350_LAUNCHXL/blestack/simple_peripheral/tirtos/iar/config/ccfg_app_ble.c" \
 "../Startup/main.c" 
 
 
