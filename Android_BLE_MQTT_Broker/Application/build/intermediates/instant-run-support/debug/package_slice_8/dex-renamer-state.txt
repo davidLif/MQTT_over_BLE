@@ -1,0 +1,4 @@
+#Mon Mar 26 15:18:44 IDT 2018
+base.0=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\27
+path.0=classes.dex
+renamed.0=classes.dex

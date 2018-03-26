@@ -1,7 +1,27 @@
 #Internal package file, do not edit.
-#Fri Mar 23 13:35:41 IDT 2018
-0.baseType=DIRECTORY
-0.base=C\:\\MQTT_over_BLE\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Mon Mar 26 15:24:36 IDT 2018
+2.base=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\35
+5.set=DEX
 0.path=classes.dex
+2.baseType=DIRECTORY
+3.base=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\30
+2.set=DEX
+1.path=classes.dex
+4.base=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\33
+count=6
+5.baseType=DIRECTORY
+2.path=classes.dex
+5.base=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\31
+4.set=DEX
+3.path=classes.dex
+3.baseType=DIRECTORY
+1.set=DEX
+4.path=classes.dex
+1.baseType=DIRECTORY
+5.path=classes.dex
+0.base=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\34
+0.baseType=DIRECTORY
+3.set=DEX
+1.base=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\32
+4.baseType=DIRECTORY
 0.set=DEX
-count=1

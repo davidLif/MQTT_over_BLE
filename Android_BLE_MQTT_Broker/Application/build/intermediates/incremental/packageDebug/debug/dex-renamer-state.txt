@@ -1,4 +1,19 @@
-#Fri Mar 23 13:35:41 IDT 2018
-base.0=C\:\\MQTT_over_BLE\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Mon Mar 26 15:24:36 IDT 2018
+path.1=classes.dex
 path.0=classes.dex
+renamed.5=classes6.dex
+renamed.4=classes5.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
 renamed.0=classes.dex
+base.5=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\34
+base.4=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\32
+base.3=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\35
+base.2=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\30
+base.1=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\33
+base.0=C\:\\CompilationTest\\Android_BLE_MQTT_Broker\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\31
+path.5=classes.dex
+path.4=classes.dex
+path.3=classes.dex
+path.2=classes.dex
