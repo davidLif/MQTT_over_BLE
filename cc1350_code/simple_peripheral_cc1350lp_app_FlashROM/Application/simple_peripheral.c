@@ -263,6 +263,13 @@ Display_Handle dispHandle = NULL;
  */
 
 static uint8 receiveBuffer[RX_VALUE_LEN];
+static void * sendBuffer = NULL;
+static uint8 sendLen = 0;
+static uint8 setsendBuffer = 0;
+static uint8 sentRetValue = 0;
+Semaphore_Handle sendSemaphore;
+Semaphore_Params semParams3;
+Semaphore_Struct structSem3; /* Memory allocated at build time */
 
 // Entity ID globally used to check for source and/or destination of messages
 static ICall_EntityID selfEntity;
@@ -382,6 +389,7 @@ static uint8_t rspTxRetry = 0;
 static void SimpleBLEPeripheral_init( void );
 static void SimpleBLEPeripheral_extraTask(UArg a0, UArg a1);
 static void SimpleBLEPeripheral_taskFxn(UArg a0, UArg a1);
+static uint8 SendOnOtherTask(uint8 len, void *value, uint32_t timeout);
 
 static uint8_t SimpleBLEPeripheral_processStackMsg(ICall_Hdr *pMsg);
 static uint8_t SimpleBLEPeripheral_processGATTMsg(gattMsgEvent_t *pMsg);
@@ -465,9 +473,11 @@ void SimpleBLEPeripheral_createTask(void)
 
   Semaphore_Params_init(&semParams);
   Semaphore_construct(&structSem, 0, &semParams);
-
-  /* It's optional to store the handle */
   bleInitFinishedSemaphore = Semaphore_handle(&structSem);
+
+  Semaphore_Params_init(&semParams3);
+  Semaphore_construct(&structSem3, 0, &semParams3);
+  sendSemaphore = Semaphore_handle(&structSem3);
 
   // Configure second task
   Task_Params_init(&taskParams);
@@ -674,8 +684,29 @@ static void SimpleBLEPeripheral_extraTask(UArg a0, UArg a1) {
     Semaphore_pend(bleInitFinishedSemaphore, BIOS_WAIT_FOREVER);
 
     receivedLen = Rx_receiveBlocking((void *)receiveBuffer, 0); // 0 == wait forever
+    SendOnOtherTask(receivedLen, (void *)receiveBuffer, 0);
+}
 
+static uint8 SendOnOtherTask(uint8 len, void *value, uint32_t timeout) {
 
+    uint32_t timeoutInClicks;
+        if (timeout == 0) {
+            timeoutInClicks = BIOS_WAIT_FOREVER;
+        }
+        else {
+            timeoutInClicks = timeout * (timeout/Clock_tickPeriod);
+        }
+
+    sendBuffer = value;
+    sendLen = len;
+    setsendBuffer = 1;
+    bool isSuccessful = Semaphore_pend(sendSemaphore, timeoutInClicks);
+    if (isSuccessful) {
+        return sentRetValue;
+    }
+    else {
+        return 0;
+    }
 }
 
 
@@ -1266,13 +1297,18 @@ static void SimpleBLEPeripheral_performPeriodicTask(void)
   //uint8 receivedLen = Rx_tryReceive((void *)receiveBuffer);
   //uint8_t arr[6] = {'G', 'o', 't', ' ', 'm', 'e'};
   //Tx_BleUnsafeSend(6, arr);
+  if (setsendBuffer != 0) {
+      setsendBuffer = 0;
+      sentRetValue = Tx_BleUnsafeSend(sendLen, sendBuffer);
+      Semaphore_post(sendSemaphore);
+  }
 
-  if (receivedLen != 0) {
+  //if (receivedLen != 0) {
       //((uint8 *)receiveBuffer)[0] = seeIfExecuted;
       //uint32_t currVal =  PIN_getOutputValue(Board_PIN_LED1);
       //PIN_setOutputValue(ledPinHandle, Board_PIN_LED1, !currVal);
-      Tx_BleUnsafeSend(receivedLen, receiveBuffer);
-  }
+      //Tx_BleUnsafeSend(receivedLen, receiveBuffer);
+  //}
 
 #endif //!FEATURE_OAD_ONCHIP
 }

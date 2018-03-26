@@ -78,6 +78,8 @@ extern "C"
  */
 extern void SimpleBLEPeripheral_createTask(void);
 
+extern uint8 SendOnOtherTask(uint8 len, void *value, uint32_t timeout);
+
 
 /*********************************************************************
 *********************************************************************/
